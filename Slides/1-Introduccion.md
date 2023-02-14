@@ -395,23 +395,6 @@ Los datos son almacenados en tablas:
 ---
 
 <style scoped>
-{ font-size: 1.5rem; }
-p { font-size: 1.4rem; }
-</style>
-
-## Bases de datos NoSQL
-
-No cumplen el modelo relacional.
-
-De "*reciente*" aparición.
-
-También llamadas `NoSQL`.
-
-![bg vertical right:50% 140%](images/t1/no-sql.png)
-
----
-
-<style scoped>
 li { font-size: 0.7rem; }
 p { font-size: 0.65rem; }
 section {padding-right: 44px;}
