@@ -1,0 +1,106 @@
+/* @theme bbdd */
+
+/*****************
+ @author: Alberto Díaz-Álvarez
+ @version: 1.0
+ @update: 2022-01-27
+ Based on the work of Paulo Cunha (https://github.com/cunhapaulo/marpstyle)
+*****************/
+
+@import "default";
+
+section {
+    background-image: url('https://marp.app/assets/hero-background.jpg');
+}
+
+
+h1 {
+    color: #242d31;
+    border-bottom: 1px solid #93a1a1;
+}
+
+code {
+    font-size: 100%;
+    font-family: "Fira Code", monospace;
+    line-height: 1.2em;
+    padding: 0em;
+}
+
+/**********************************************************************/
+/* Título de transparencias */
+section.titlepage {
+    --title-color: #242d31;
+    --subtitle-color: #93a1a1;
+}
+
+section.titlepage h1 {
+    font-size: 150%;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.25;
+    padding-right: 20%;
+}
+
+section.titlepage h2 {
+    font-size: 130%;
+    font-weight: 600;
+    text-align: left;
+    color: var(--subtitle-color);
+    line-height: 1.2;
+    margin-top: -0.2em;
+    padding-bottom: 95px;
+}
+
+section.titlepage h3,
+section.titlepage h4,
+section.titlepage h5 {
+    font-weight: 400;
+    color: var(--title-color);
+    line-height: 0;
+    letter-spacing: ;
+}
+
+section.titlepage h3 {
+    font-size: 110%;
+}
+
+section.titlepage h4 {
+    font-size: 90%;
+}
+
+section.titlepage h5 {
+    font-size: 90%;
+}
+
+section.titlepage img {
+    background-color: var(--background-color);
+    padding-top: 1.5rem;
+}
+
+section.titlepage footer,
+section.titlepage header,
+section.titlepage:after {
+    display: none;
+}
+
+/**********************************************************************/
+/* Separación de secciones */
+/**/
+section.section {
+    background-color: var(--color-secondary);
+    text-align: center !important;
+    font-weight: bold !important;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+section.section h1 {
+    font-size: 200%;
+    border: none;
+}
+
+section.section footer,
+section.section header,
+section.section:after {
+    display: none;
+}  
