@@ -29,6 +29,7 @@ code {
 /**********************************************************************/
 /* Título de transparencias */
 section.titlepage {
+    background-image: none;
     --title-color: #242d31;
     --subtitle-color: #93a1a1;
 }
@@ -73,7 +74,6 @@ section.titlepage h5 {
 }
 
 section.titlepage img {
-    background-color: var(--background-color);
     padding-top: 1.5rem;
 }
 
@@ -87,7 +87,8 @@ section.titlepage:after {
 /* Separación de secciones */
 /**/
 section.section {
-    background-color: var(--color-secondary);
+    background-color: #242d31;
+    background-image: none;
     text-align: center !important;
     font-weight: bold !important;
     padding-top: auto;
@@ -95,6 +96,7 @@ section.section {
 }
 
 section.section h1 {
+    color: white;
     font-size: 200%;
     border: none;
 }
