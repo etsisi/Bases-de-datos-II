@@ -26,6 +26,13 @@ code {
     padding: 0em;
 }
 
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+  
 /**********************************************************************/
 /* Título de transparencias */
 section.titlepage {
@@ -105,4 +112,57 @@ section.section footer,
 section.section header,
 section.section:after {
     display: none;
-}  
+}
+
+/**********************************************************************/
+/* Cita */
+/**/
+section.cite {
+    background-color: #FFE066;
+    background-image: none;
+  }
+  
+  section.cite p {
+    color: #50514F;
+    letter-spacing: var(--letter-spacing);
+    font-size: 150%;
+    text-align: center;
+    line-height: 1.25em;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  section.cite strong {
+    color: var(--strong-color);
+    font-weight: bolder;
+  }
+  
+  section.cite footer,
+  section.cite header,
+  section.cite:after {
+    display: none;
+  }
+  
+  .cite-author {
+    text-align: right;
+  }
+  
+  .cite-author:after {
+    color: #50514F;
+    font-size: 125%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-right: 130px;
+  }
+  
+  .cite-author[data-text]:after {
+    content: " - " attr(data-text) " - ";
+  }
+  
+  .cite-author p {
+    padding-bottom: 40px
+  }
+  
