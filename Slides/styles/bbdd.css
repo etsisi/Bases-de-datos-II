@@ -10,7 +10,7 @@
 @import "default";
 
 section {
-    background-image: url('https://marp.app/assets/hero-background.jpg');
+    /* background-image: url('https://marp.app/assets/hero-background.jpg'); */
 }
 
 
@@ -121,8 +121,8 @@ section.cite {
     background-color: #FFE066;
     background-image: none;
   }
-  
-  section.cite p {
+
+section.cite p {
     color: #50514F;
     letter-spacing: var(--letter-spacing);
     font-size: 150%;
@@ -133,36 +133,43 @@ section.cite {
     padding-bottom: auto;
     padding-left: 100px;
     padding-right: 100px;
-  }
-  
-  section.cite strong {
+}
+
+section.cite strong {
     color: var(--strong-color);
     font-weight: bolder;
-  }
-  
-  section.cite footer,
-  section.cite header,
-  section.cite:after {
+}
+
+section.cite footer,
+section.cite header,
+section.cite:after {
     display: none;
-  }
-  
-  .cite-author {
+}
+
+.cite-author {
     text-align: right;
-  }
-  
-  .cite-author:after {
+}
+
+.cite-author:after {
     color: #50514F;
     font-size: 125%;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding-right: 130px;
-  }
-  
-  .cite-author[data-text]:after {
+}
+
+.cite-author[data-text]:after {
     content: " - " attr(data-text) " - ";
-  }
-  
-  .cite-author p {
+}
+
+.cite-author p {
     padding-bottom: 40px
-  }
+}
   
+/**********************************************************************/
+/* Cita */
+/**/
+section.intro {
+    background-color: #eec9fd;
+    background-image: none;
+}
