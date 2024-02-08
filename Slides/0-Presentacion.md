@@ -1,24 +1,32 @@
 ---
-marp: true
-size: 4:3
-auto-scaling: 
-    - true
-    - fittingHeader
-    - math
-    - code
-backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.jpg')
-paginate: true
-header: Bases de datos II. Curso 2022-2023.
+marp        : true
+title       : Presentación de la asignatura
+paginate    : true
+theme       : etsisi
+header      : Presentación
+footer      : Bases de datos II. Curso 2023-2024.
+description : >
+  Presentación de la asignatura de bases de datos II. Curso 2023-2024.
+  E.T.S.I. Sistemas Informáticos (UPM)
+keywords    : >
+  Bases de datos, Grado en Ciencia de Datos e Inteligencia artificial.
+  Presentación
+math        : mathjax
 ---
-<!--
-_header: ''
-_footer: ![height:30](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-informational.svg)<br>Esta obra está bajo una [licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/). Icono diseñado por Flaticon
--->
 
-# BASES DE DATOS II
+<!-- _class: titlepage -->
 
-Curso 2022-2023
+# Presentación
+
+## Bases de datos II - Curso 2023-2024
+
+### Departamento de Sistemas Informáticos
+
+#### E.T.S.I. de Sistemas Informáticos - UPM
+
+##### 8 de febrero de 2024
+
+[![height:30](https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ---
 
@@ -35,41 +43,26 @@ Durante la asignatura se estudiará las técnicas estandarizadas para preparar l
 
 La asignatura ha sido diseñada con un elevado contenido práctico, de tal manera que los alumnos puedan aplicar los contenidos teóricos aprendidos en clase en entornos reales de trabajo con herramientas ampliamente utilizadas en el sector productivo.
 
+---
 
+# Profesorado
 
+- Edgar Talavera Muñoz (**Coordinador**). <e.talavera@upm.es>. *Despacho 1222*.
+- Alberto Díaz Álvarez. <alberto.diaz@upm.es>. *Despacho 4122*.
+- Ángel Panizo Lledot. <angel.panizo@upm.es> *Despacho 1214*.
 
 ---
 
-<style scoped>
-li { font-size: 0.9rem; }
-p { font-size: 0.9rem; }
-</style>
+# Conocimientos previos recomendados
 
-## Profesorado
-
-- Edgar Talavera Muñoz(**Coordinador**). e.talavera@upm.es. *Despacho 1222*.
-- Alberto Díaz Álvarez. alberto.diaz@upm.es. *Despacho 4122*.
-- Ángel Panizo Lledot. angel.panizo@upm.es *Despacho 1214*.
-
----
-
-## Conocimientos previos recomendados
+Es de esperar que los estudiantes tengan conocimientos previos en:
 
 - Fundamentos de la programación
-- Bases de Datos I
-- Programación para Ciencia de Datos
-
-### Otros conocimientos recomendados
-
 - Bases de datos relacionales
-- Programación
+
+Pero bueno, se supone que ya sabéis todo esto, ¿no?
 
 ---
-
-<style scoped>
-li { font-size: 0.8rem; }
-p { font-size: 0.8rem; }
-</style>
 
 ## Competencias
 
@@ -81,13 +74,7 @@ p { font-size: 0.8rem; }
 
 **CE07** | Capacidad de diseñar e implementar sistemas de información (incluyendo modelos de datos y estrategias de gestión de datos) dimensionados para gestionar el volumen, velocidad y variedad de los datos, de forma adecuada para su almacenamiento, procesamiento y acceso para tratamientos posteriores.
 
-
 ---
-
-<style scoped>
-li { font-size: 0.8rem; }
-p { font-size: 0.8rem; }
-</style>
 
 ## Resultados de aprendizaje
 
@@ -103,43 +90,22 @@ p { font-size: 0.8rem; }
 
 ---
 
-<style scoped>
-li { font-size: 0.5rem; }
-p { font-size: 0.5rem; }
-</style>
-
-## Temario guía docente
+# Temario guía docente
 
 1. Bloque I: Bases de datos avanzadas
-   1. Bases de datos basadas en ficheros
-   2. Bases de datos federadas
-2. Bloque II: Gobernanza de datos
-   1. Gobernanza de datos
-   2. Data provenance
-   3. Curación y limpieza de datos
-   4. Transformación y serialización de datos
-3. Bloque III: Bases de datos NoSQL
-   1. Fundamentos de bases de datos NoSQL
-   2. Comparativa de bases de datos relacionales vs NoSQL
-   3. Tipos y características de bases de datos NoSQL
-   4. Bases de datos documentales
-   5. Bases de datos basadas en grafos
-   6. Bases de datos basadas en clave-valor
-   7. Otras bases de datos (dispersas, columnares, en memoria, ...)
-4. Bloque IV: Data streaming
-   1. Procesamiento de datos continuos en memoria
-   2. Motores de data streaming
+2. Bloque II: Bases de datos distribuidas
+3. Bases de datos NoSQL: documentales
+4. Bases de datos NoSQL: grafos
+5. Bases de datos NoSQL: clave-valor
+6. Bloque VI: Data streaming
 
+Este año no hemos estado finos en organizar el temario
+
+- Gracias E.T.S.I. Ingenieros Informáticos por proponer un temario tan claro
 
 ---
 
-
-<style scoped>
-li { font-size: 0.6rem;}
-p { font-size: 0.6rem;}
-</style>
-
-## Temario
+# Temario de verdad
 
 1. Bloque I: Bases de datos avanzadas
    1. Introducción a las bases de datos NoSQL (tipos de bases de datos No-SQL)
@@ -150,66 +116,54 @@ p { font-size: 0.6rem;}
    2. Curación y limpieza de datos
    3. Transformación y serialización de datos
 3. Bloque III: Bases de datos NoSQL
-   1. Mongodb - bases de datos basadas en documentos
-   2. Cassandra - bases de datos basadas en columnas (key-value)
-   3. Neo4j - bases de datos basadas en grafos
+   1. Cassandra - bases de datos basadas en columnas (key-value)
+   2. Mongodb - bases de datos basadas en documentos
+   3. Redis - bases de datos basadas en clave-valor
+   4. Neo4j - bases de datos basadas en grafos
 4. Bloque IV: Data streaming
    1. Programación contra bases de datos
-   2. Motores de data streaming 
-
-
----
-
-
-## Horario
-
-![w:500](images/Cronograma.png)
+   2. Motores de data streaming
 
 ---
 
-<style scoped>
-li { font-size: 0.8rem; }
-p { font-size: 0.8rem; }
-</style>
+# Horario
 
-## Evaluación progresiva
+- Martes de 13:00 a 15:00
+- Miércoles de 09:00 a 11:00
+
+---
+
+# Evaluación progresiva
 
 Prácticas (40%)
+
+- Dos prácticas, 20% cada una
 - En grupos
 - Evaluación en el aula
 
 Examen final (60%)
-- Nota mínima de 4
+
+- Nota mínima de 4 sobre 10
 - Todo el temario
-- Viernes 9 de junio de 2023 a las 10:00 en el aula 1302
+- Viernes 30 de mayoo de 2024 a las 18:00 en el aula 4303
 
-Será necesario alcanzar una nota total >= 5 para aprobar la asignatura.
+Será necesario alcanzar una nota total $\ge 5$ para aprobar la asignatura.
 
----
-
-## Evaluación prueba global
-
-Prueba escrita el **viernes 9 de junio de 2023 a las 10:00** en el aula **1302** incluyendo preguntas teórico-prácticas de todo el temario de la asignatura.
-
-Es necesaro obtener una nota mínima de 4 sobre 10.
-
-Para aprobar sin haber seguido la evaluación progresiva será necesario obtener una nota total >= 5 (la prueba global cuenta un 60% del total de la nota, por lo que sacar un 5 en esta prueba no equivale a aprobar la asignatura).
+- Un 5 en el examen **no es aprobar la asignatura** (evaluación progresiva)
 
 ---
 
-## Convocatoria extraordinaria
+# Convocatoria extraordinaria
 
-Prueba escrita el **jueves 6 de julio de 2023 a las 10:00** incluyendo preguntas teórico-prácticas de todo el temario de la asignatura.
+Prueba escrita el **viernes 8 de julio de 2024 a las 18:00** en el aula **4303**
 
-Es obligatorio alcanzar una nota mínima de 5 puntos sobre 10.
+- Incluye preguntas teórico-prácticas de todo el temario de la asignatura
+
+Será necesario alcanzar una nota total $\ge 5$ para aprobar la asignatura.
 
 ---
-<style scoped>
-li { font-size: 0.7rem; }
-p { font-size: 0.8rem; }
-</style> 
 
-## Recursos didácticos
+# Recursos didácticos
 
 1. **Moodle de la asignatura.**
 2. Data Governance: How to Design, Deploy, and Sustain an Effective Data Governance Program (English Edition) 2o Edición. John Ladley.
@@ -218,6 +172,3 @@ p { font-size: 0.8rem; }
 5. SQL & NoSQL Databases: A Comprehensive Introduction To Relational (SQL) And Non-relational (NoSQL) Databases (English Edition). Danniella Hardin
 6. SQL & NoSQL Databases: Models, Languages, Consistency Options and Architectures for Big Data Management (English Edition). Andreas Meier; Michael Kaufmann
 7. Stream Processing with Apache Flink: Fundamentals, Implementation, and Operation of Streaming Applications. Fabian Hueske, Vasiliki Kalavri
-
-
-
