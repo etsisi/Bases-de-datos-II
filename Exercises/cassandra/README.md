@@ -1,6 +1,6 @@
-# Objetivo de la práctica
+# Objetivos
 
-El objetivo de esta práctica es familiarizarse con las operaciones
+El objetivo de este ejercicio es familiarizarse con las operaciones
 básicas de Cassandra, incluyendo la creación de keyspaces, tablas,
 inserción, actualización y borrado de datos utilizando CQL (Cassandra
 Query Language).
