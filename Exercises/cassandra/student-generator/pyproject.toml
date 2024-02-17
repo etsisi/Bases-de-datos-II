@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "student-generator"
+version = "0.1.0"
+description = ""
+authors = ["blazaid <alberto.diaz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+faker = "^23.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
