@@ -21,14 +21,14 @@ services:
       - ./tmp/cassandra1:/var/lib/cassandra
       #- ./etc/cassandra1:/etc/cassandra
     environment: &environment
-        CASSANDRA_SEEDS: cass1,cass2
+        CASSANDRA_SEEDS: cassandra1,cassandra2
         CASSANDRA_CLUSTER_NAME: Virgo
         CASSANDRA_DC: MilkyWay
         CASSANDRA_RACK: R1
         CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
         CASSANDRA_NUM_TOKENS: 128
-        MAX_HEAP_SIZE: 256M
-        HEAP_NEWSIZE: 128M
+        MAX_HEAP_SIZE: 128M
+        HEAP_NEWSIZE: 64M
   node2:
     image: cassandra:5.0
     container_name: cassandra2

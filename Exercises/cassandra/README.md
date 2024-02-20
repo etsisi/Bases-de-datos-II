@@ -31,19 +31,19 @@ Query Language).
 3. **Creación de una tabla**: Crea una tabla `estudiantes` con campos
     para el `id` del estudiante, `nombre`, `edad` y `carrera`.
 
-## 3: Inserción y consulta de datos
+## 3. Inserción y consulta de datos
 
 1. **Carga de datos**: Carga los datos relativos a los estudiantes en la
     tabla `estudiantes`.
 2. **Consulta de datos**: Realiza una consulta para verificar que la
     inserción se realizó correctamente.
 
-## 4: Actualización y borrado de datos
+## 4. Actualización y borrado de datos
 
 1. **Actualización de datos**: Actualiza la edad de un estudiante.
 2. **Borrado de datos**: Elimina un registro de estudiante.
 
-## 5: Limpieza y finalización
+## 5. Limpieza y finalización
 
 1. **Borrado de la tabla**. Elimina la tabla `estudiantes`.
 2. **Borrado del _keyspace_**. Elimina el keyspace `bbdd2`.
