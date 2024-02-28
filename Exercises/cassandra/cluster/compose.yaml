@@ -27,8 +27,8 @@ services:
         CASSANDRA_RACK: R1
         CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
         CASSANDRA_NUM_TOKENS: 128
-        MAX_HEAP_SIZE: 128M
-        HEAP_NEWSIZE: 64M
+        MAX_HEAP_SIZE: 512M
+        HEAP_NEWSIZE: 256M
   node2:
     image: cassandra:5.0
     container_name: cassandra2
