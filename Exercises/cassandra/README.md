@@ -26,7 +26,7 @@ Query Language).
 1. **Creación de un _keyspace_**: Crea un keyspace llamado `bbdd2` con
     la estrategia de replicación `SimpleStrategy` y un factor de
     replicación de 3.
-2. **Uso del _keyspace_**: Cambia al keyspace universidad para que todas
+2. **Uso del _keyspace_**: Cambia al keyspace `bbdd2` para que todas
     las operaciones posteriores se realicen en este keyspace.
 3. **Creación de una tabla**: Crea una tabla `estudiantes` con campos
     para el `id` del estudiante, `nombre`, `edad` y `carrera`.
