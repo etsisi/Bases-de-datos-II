@@ -15,15 +15,13 @@ math: mathjax
 
 <!-- _class: titlepage -->
 
-# MongoDB - Bases de datos documentales
+# Optimización y persistencia para el almacenamiento de datos
 
-## Tecnologías de Persistencia de Datos NoSQL
+## Tema 4. Tecnologías de Persistencia de Datos NoSQL
 
-### Edgar Talavera Muñoz (<small><e.talavera@upm.es></small>)
+### Departamento de Sistemas Informáticos
 
-#### Departamento de Sistemas Informáticos
-
-##### Escuela Técnica superior de Ingeniería de Sistemas Informáticos
+#### E.T.S.I. de Sistemas Informáticos - UPM
 
 [![height:30](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-informational.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
