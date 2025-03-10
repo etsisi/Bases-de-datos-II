@@ -216,7 +216,7 @@ math        : mathjax
 
 ---
 ## Ecosistema Spark
-- **Scala vs. Python**: Scala es diez veces más rápido que Python.
+- **Scala vs. Python**: Scala es diez veces más rápido que Python. 
 - **Concurrencia**: Scala maneja muy bien la concurrencia y el paralelismo, mientras que Python no soporta el multihilo verdadero.
 - **Curva de aprendizaje**: Scala es más complejo en comparación con Python.
 - **Soporte de la comunidad**: Python tiene una comunidad muy grande de la cual puede obtener soporte.
@@ -542,7 +542,170 @@ Output: `[('even', 6), ('odd', 4)]`
 
 ---
 # Spark API
+## aggregateByKey
 
+```python
+rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
+rdd.glom().collect()
+```
+Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
+
+```python
+rdd.aggregateByKey([], lambda x, y: x + [y], lambda x, y: x + y).collect()
+```
+Output: `¿?`
+
+- El primer parámetro es de tipo U. Generalmente neutral.
+- Primera función: `f : (U, T) → U`. Agregación por partición.
+- Segunda función: `g : (U, U) → U`. Agregación de particiones.
+---
+# Spark API
+## aggregateByKey
+
+```python
+rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
+rdd.glom().collect()
+```
+Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
+
+```python
+rdd.aggregateByKey([], lambda x, y: x + [y], lambda x, y: x + y).collect()
+```
+Output: `[(1, [1, 3]), (2, [2, 4, 6])]`
+
+---
+# Spark API
+## combineByKey
+
+```python
+rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
+rdd.glom().collect()
+```
+Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
+
+```python
+rdd.combineByKey(lambda x: [x],
+         lambda x, y: x + [y],
+         lambda x, y: x + y).collect()
+```
+Output: `¿?`
+
+---
+# Spark API
+## combineByKey
+
+```python
+rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
+rdd.glom().collect()
+```
+Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
+
+```python
+rdd.combineByKey(lambda x: [x],
+         lambda x, y: x + [y],
+         lambda x, y: x + y).collect()
+```
+Output: `[(1, [1, 3]), (2, [2, 4, 6])]`
+
+---
+# Spark API
+
+## combineByKey
+
+```python
+rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
+rdd.glom().collect()
+```
+Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
+
+```python
+rdd.combineByKey(lambda x: [x],
+     lambda x, y: x + [y],
+     lambda x, y: x + y).collect()
+```
+Output: `¿?`
+
+---
+# Spark API
+
+## combineByKey
+
+```python
+rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
+rdd.glom().collect()
+```
+Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
+
+```python
+rdd.combineByKey(lambda x: [x],
+     lambda x, y: x + [y],
+     lambda x, y: x + y).collect()
+```
+Output: `[(1, [1, 3]), (2, [2, 4, 6])]`
+
+---
+
+# Spark API
+
+## cogroup
+
+```python
+rdd1 = sc.parallelize([(1,1),(1,3)])
+rdd2 = sc.parallelize([(1,5),(2,2)])
+rdd1.cogroup(rdd2).collect()
+```
+
+Output: `¿?`
+
+---
+# Spark API
+
+## cogroup
+
+```python
+rdd1 = sc.parallelize([(1,1),(1,3)])
+rdd2 = sc.parallelize([(1,5),(2,2)])
+rdd1.cogroup(rdd2).collect()
+```
+
+Output: `[(1,([1,3],[5])),(2,([], [2]))]`
+
+---
+
+# Spark API
+## join
+
+- Por defecto: [inner](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.join.html) 
+
+```python
+rdd1 = sc.parallelize([(1,1),(1,3)])
+rdd2 = sc.parallelize([(1,5),(2,2)])
+rdd1.join(rdd2).collect()
+```
+Output: `¿?`
+
+---
+
+# Spark API
+## join
+
+- Por defecto: [inner](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.join.html) 
+
+```python
+rdd1 = sc.parallelize([(1,1),(1,3)])
+rdd2 = sc.parallelize([(1,5),(2,2)])
+rdd1.join(rdd2).collect()
+```
+Output: `[(1, (1, 5)), (1, (3, 5))]`
+
+
+---
+# Spark API
+## Otras funciones
+
+- **sample**: Toma una muestra aleatoria (útil para ML).
+- **sampleByKey**: Diferentes fracciones por clave. 
+- **pipe**: Pasa los elementos del RDD a través de un comando de shell.
 
 Más detalles en: [spark.apache.org/docs/latest/api/python/](https://spark.apache.org/docs/latest/api/python/)
 
