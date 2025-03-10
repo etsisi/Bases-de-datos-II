@@ -48,7 +48,6 @@ math        : mathjax
 ---
 
 <!-- _class: section -->
-<center><img src="images/spark/spark.png" width="30%"></center>
 
 # ¿Qué es Apache Spark?
 ---
@@ -170,6 +169,13 @@ math        : mathjax
 ---
 ## Spark
 
+**Definición**: Framework de proceesamiento de datos que puede realizar rápidamente tareas sobre conjuntos de **datos masivos** y distribuir el procesamiento de datos eficientemente. Utiliza almacenamiento en **caché** y la ejecución de consultas es optimizada para datos de cualquier tamaño. En pocas palabras, Spark es un motor rápido y general para el procesamiento de datos a gran escala.
+<center><img src="images/spark/spark.png" width="50%"></center>
+
+
+---
+## Spark
+
 - **Procesamiento mucho más eficiente y tolerancia a fallos**: Basado en **Resilient Distributed Datasets** (RDDs).
 - **Mantiene los datos en memoria principal**: Esto permite un acceso rápido y eficiente a los datos.
 - **API flexible**: Ofrece una API versátil que soporta múltiples lenguajes de programación.
@@ -191,6 +197,38 @@ math        : mathjax
 
 <small>Fuente: Núñez, Alejandro & Flores, Jorge. (2021). High-availability distributed architecture for fraud detection. 15. 199-224. </small>
 
+---
+## Ecosistema Spark
+- **Scala vs. Python**: Spark está escrito en Scala. Scala no solo es el lenguaje de programación de Spark, sino que también es escalable en JVM.
+- **UDFs**: User-Defined Functions(UDFs) son rutinas programables por el usuario que actúan sobre una fila.
+
+<center><img src="images/spark/Scala_vs_python.png" width="45%"></center>
+
+<small><center>Fuente: [Scala Vs. Python](https://www.simplilearn.com/scala-vs-python-article)</center></small>
+
+---
+## Ecosistema Spark
+- **Scala vs. Python usando UDFs**: transformacines de un DataFrame con funciones nativas o SQL, ocurren dentro de la JVM. Sin embargo, al usar UDFs de Python, el código no se ejecuta  Python Runtime. Cada fila del DataFrame se serializa, se envía al Python Runtime y se devuelve a la JVM. 
+
+<center><img src="images/spark/pyvsscala.png" width="35%"></center>
+
+<small><center>Fuente: [Evitando usar UDFs en Apache Spark](https://blog.damavis.com/evitando-usar-udfs-en-apache-spark/)</center></small>
+
+---
+## Ecosistema Spark
+- **Scala vs. Python**: Scala es diez veces más rápido que Python.
+- **Concurrencia**: Scala maneja muy bien la concurrencia y el paralelismo, mientras que Python no soporta el multihilo verdadero.
+- **Curva de aprendizaje**: Scala es más complejo en comparación con Python.
+- **Soporte de la comunidad**: Python tiene una comunidad muy grande de la cual puede obtener soporte.
+- **Uso de IA**: El ecosistema de Python es un recurso ideal para el aprendizaje automático y la inteligencia artificial (IA).
+---
+## Ecosistema Spark
+- **Scala vs. Python** Elección:
+  - Proyectos grandes y Scalables: Scala. 
+  - Presupuesto: Profesionales con Scala mucho más caros.
+  - IA: cuanta más orientación a IA mejor python
+  - Mejor comunicacón con el equipo: Python
+  - En este curso: Python
 ---
 
 <!-- _class: section -->
@@ -410,7 +448,10 @@ from pyspark import SparkConf, SparkContext
 
 conf = SparkConf().setAppName("MiAplicacion").setMaster("local")
 sc = SparkContext(conf=conf)
-```
+```## Ecosistema Spark
+- **Scala vs. Python usando UDFs**: transformacines de un DataFrame con funciones nativas o SQL, ocurren dentro de la JVM.. Sin embargo, al usar UDFs de Python, el código no se ejecuta  Python Runtime. Cada fila del DataFrame se serializa, se envía al Python Runtime y se devuelve a la JVM. 
+
+<center><img src="images/spark/pyvsscala.png" width="50%"></center>
 
 - Crear un RDD desde una lista:
 
@@ -679,4 +720,4 @@ Para más detalles y ejemplos de funciones comúnmente usadas en DataFrames de P
 
 
 ---
-# Gracias<!-- _class: section -->
+# Gracias <!-- _class: section -->
