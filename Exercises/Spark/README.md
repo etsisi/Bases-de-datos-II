@@ -1,4 +1,4 @@
-# 🔥 Spark + Jupyter + Cassandra (externo)
+#  Spark + Jupyter + Cassandra (externo)
 
 Este entorno Docker te permite trabajar con Apache Spark y Jupyter Notebook, conectándote a una instancia de Cassandra **que ya tienes ejecutando por separado** (fuera del `docker-compose`).
 
