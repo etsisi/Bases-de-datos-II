@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "4040:4040"
+      - "7077:7077"
+    networks:
+      - sparknet
+
+  jupyter:
+    image: jupyter/pyspark-notebook
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      - PYSPARK_SUBMIT_ARGS=--packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.0 pyspark-shell
+      - SPARK_MASTER=spark://spark:7077
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    depends_on:
+      - spark
+    networks:
+      - sparknet
+
+networks:
+  sparknet:

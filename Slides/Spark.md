@@ -60,7 +60,7 @@ math        : mathjax
 
 ---
 
-## MapReduce: ¿Qué es?
+# MapReduce: ¿Qué es?
 
 ### Motivación
 
@@ -70,7 +70,7 @@ math        : mathjax
 
 ---
 
-## MapReduce: ¿Qué es?
+# MapReduce: ¿Qué es?
 
 ### Motivación
 
@@ -80,7 +80,7 @@ math        : mathjax
 
 ---
 
-## MapReduce: ¿Qué es?
+# MapReduce: ¿Qué es?
 
 ### Motivación
 
@@ -90,7 +90,7 @@ math        : mathjax
 
 ---
 
-## MapReduce: ¿Qué es?
+# MapReduce: ¿Qué es?
 
 ### Computación Distribuida
 
@@ -101,7 +101,7 @@ math        : mathjax
 <small>Fuente: Elmahdy, Adel & Mohajer, Soheil. (2018). On the Fundamental Limits of Coded Data Shuffling. 716-720. 10.1109/ISIT.2018.8437672.</small>
 
 ---
-## MapReduce: ¿Qué es?
+# MapReduce: ¿Qué es?
 
 ### Computación Distribuida
 
@@ -113,7 +113,7 @@ math        : mathjax
 <small>Fuente: Elmahdy, Adel & Mohajer, Soheil. (2018). On the Fundamental Limits of Coded Data Shuffling. 716-720. 10.1109/ISIT.2018.8437672.</small>
 
 ---
-## MapReduce: ¿Qué es?
+# MapReduce: ¿Qué es?
 
 - **La computación distribuida es muy difícil de implementar**.
 - **El paradigma MapReduce proporciona una abstracción**: Permite realizar computación distribuida sin enfrentar estas dificultades, simplificando el desarrollo y la ejecución de tareas distribuidas. (Desarrollado e Implementado por Hadoop)
@@ -122,7 +122,7 @@ math        : mathjax
 
 ---
 
-## Paradigma MapReduce
+# Paradigma MapReduce
 
 - **MapReduce**: Es un modelo de programación para el procesamiento de grandes volúmenes de datos de manera distribuida.
 - **Fases principales**:
@@ -131,7 +131,7 @@ math        : mathjax
 
 ---
 
-## Paradigma MapReduce
+# Paradigma MapReduce
 
 
 - **Ventajas**:
@@ -143,7 +143,7 @@ math        : mathjax
 
 ---
 
-## Conceptos: map y reduce
+# Conceptos: map y reduce
 
 - **map** ejecuta la función lambda en cada elemento de la lista dada.
   ```python
@@ -158,23 +158,24 @@ math        : mathjax
   ```
 ---
 
-## MapReduce ejemplo
+# MapReduce ejemplo
 
 - **Shuffle**: Concepto extra, distribución de datos agrupados por la _key_ 
 
 <center><img src="images/spark/mr_esquema.png" width="80%"></center>
 
-<small>Fuente: [Today Software Magazine](https://www.todaysoftmag.com/images/articles/tsm33/large/a11.png)</small>
+<small><center>Fuente: [Today Software Magazine](https://www.todaysoftmag.com/images/articles/tsm33/large/a11.png)</center></small>
+
 
 ---
-## Spark
+# Spark
 
 **Definición**: Framework de proceesamiento de datos que puede realizar rápidamente tareas sobre conjuntos de **datos masivos** y distribuir el procesamiento de datos eficientemente. Utiliza almacenamiento en **caché** y la ejecución de consultas es optimizada para datos de cualquier tamaño. En pocas palabras, Spark es un motor rápido y general para el procesamiento de datos a gran escala.
 <center><img src="images/spark/spark.png" width="50%"></center>
 
 
 ---
-## Spark
+# Spark
 
 - **Procesamiento mucho más eficiente y tolerancia a fallos**: Basado en **Resilient Distributed Datasets** (RDDs).
 - **Mantiene los datos en memoria principal**: Esto permite un acceso rápido y eficiente a los datos.
@@ -182,7 +183,7 @@ math        : mathjax
 - **Memoria distribuida**: Los datos se distribuyen en la memoria de múltiples nodos, mejorando la escalabilidad y el rendimiento.
 
 ---
-## Ecosistema Spark
+# Ecosistema Spark
 
 - **Spark Core**: Es el núcleo del framework que proporciona funcionalidades básicas de I/O, planificación y gestión de tareas distribuidas.
 - **Spark SQL**: Módulo que permite realizar consultas estructuradas utilizando SQL sobre datos distribuidos.
@@ -191,14 +192,14 @@ math        : mathjax
 - **GraphX**: API para el procesamiento y análisis de grafos distribuidos, permitiendo operaciones complejas sobre estructuras de datos en forma de grafo.
 ---
 
-## Ecosistema Spark
+# Ecosistema Spark
 
 <center><img src="images/spark/Ecosistema-de-Apache-Spark.png" width="70%"></center>
 
-<small>Fuente: Núñez, Alejandro & Flores, Jorge. (2021). High-availability distributed architecture for fraud detection. 15. 199-224. </small>
+<small><center>Fuente: Núñez, Alejandro & Flores, Jorge. (2021). High-availability distributed architecture for fraud detection. 15. 199-224. </center></small>
 
 ---
-## Ecosistema Spark
+# Ecosistema Spark
 - **Scala vs. Python**: Spark está escrito en Scala. Scala no solo es el lenguaje de programación de Spark, sino que también es escalable en JVM.
 - **UDFs**: User-Defined Functions(UDFs) son rutinas programables por el usuario que actúan sobre una fila.
 
@@ -207,28 +208,28 @@ math        : mathjax
 <small><center>Fuente: [Scala Vs. Python](https://www.simplilearn.com/scala-vs-python-article)</center></small>
 
 ---
-## Ecosistema Spark
-- **Scala vs. Python usando UDFs**: transformacines de un DataFrame con funciones nativas o SQL, ocurren dentro de la JVM. Sin embargo, al usar UDFs de Python, el código no se ejecuta  Python Runtime. Cada fila del DataFrame se serializa, se envía al Python Runtime y se devuelve a la JVM. 
+# Ecosistema Spark
+- **Scala vs. Python usando UDFs**: transformacines de un DataFrame con funciones nativas o SQL, ocurren dentro de la JVM. Sin embargo, al usar UDFs con Python, el código no se ejecuta  Python Runtime por completo. Cada fila del DataFrame se serializa, se envía al Python Runtime y se devuelve a la JVM. 
 
 <center><img src="images/spark/pyvsscala.png" width="35%"></center>
 
 <small><center>Fuente: [Evitando usar UDFs en Apache Spark](https://blog.damavis.com/evitando-usar-udfs-en-apache-spark/)</center></small>
 
 ---
-## Ecosistema Spark
-- **Scala vs. Python**: Scala es diez veces más rápido que Python. 
-- **Concurrencia**: Scala maneja muy bien la concurrencia y el paralelismo, mientras que Python no soporta el multihilo verdadero.
-- **Curva de aprendizaje**: Scala es más complejo en comparación con Python.
-- **Soporte de la comunidad**: Python tiene una comunidad muy grande de la cual puede obtener soporte.
-- **Uso de IA**: El ecosistema de Python es un recurso ideal para el aprendizaje automático y la inteligencia artificial (IA).
+# Ecosistema Spark
+- **Scala vs. Python**: **Scala** es diez veces más rápido que Python. 
+- **Concurrencia**: **Scala** maneja muy bien la concurrencia y el paralelismo, mientras que Python no soporta el multihilo verdadero.
+- **Curva de aprendizaje**: Scala es más complejo en comparación con **Python**.
+- **Soporte de la comunidad**: **Python** tiene una comunidad muy grande de la cual puede obtener soporte.
+- **Uso de IA**: El ecosistema de **Python** es un recurso ideal para el aprendizaje automático y la inteligencia artificial (IA).
 ---
-## Ecosistema Spark
+# Ecosistema Spark
 - **Scala vs. Python** Elección:
-  - Proyectos grandes y Scalables: Scala. 
-  - Presupuesto: Profesionales con Scala mucho más caros.
-  - IA: cuanta más orientación a IA mejor python
-  - Mejor comunicacón con el equipo: Python
-  - En este curso: Python
+  - Proyectos grandes y Scalables: **Scala**. 
+  - Presupuesto: Profesionales con **Scala** mucho **más caros**.
+  - IA: cuanta más orientación a **IA** mejor **python**
+  - Mejor comunicacón con el equipo: **Python**
+  - En este curso: **Python**
 ---
 
 <!-- _class: section -->
@@ -342,7 +343,7 @@ math        : mathjax
 ---
 
 # RDDs
-## Resiliencia: Linaje
+### Resiliencia: Linaje
 Spark no ejecuta las transformaciones inmediatamente.
 En su lugar, construye un plan de ejecución conocido como linaje.
 
@@ -356,7 +357,7 @@ Cada transformación genera un nuevo RDD, pero no se computa aún.
 ---
 
 # RDDs
-## Resiliencia: Linaje
+### Resiliencia: Linaje
 
 Estas transformaciones se almacenan como una secuencia de pasos:
 
@@ -368,26 +369,26 @@ Ventaja clave:
 
 ---
 # RDDs
-## Persistencia
+### Persistencia
 
 - Por defecto, Spark no guarda los RDDs en memoria.
-- Cada acción recorre el linaje completo.
-- Con cache() o persist(), Spark almacena el RDD en memoria.Si se vuelve a usar, no se recalcula: se reutiliza.
+- Cada acción **recorre** el linaje **completo**.
+- Con **cache() o persist()**, Spark almacena el RDD en memoria. Si se vuelve a usar, no se recalcula: **se reutiliza**.
 - **Ventaja**: Mejora el rendimiento cuando un RDD se usa varias veces. Solo se guarda tras ejecutarlo por primera vez.
 
 ---
 # RDDs
-## Persistencia
+### Persistencia
 
 - **Transformaciones perezosas (lazy evaluation)**: Las operaciones en RDDs no se ejecutan inmediatamente; Spark construye un plan de ejecución que se materializa solo cuando es necesario, optimizando el rendimiento.
 - **Tipos de operaciones**:
-  - **Transformations**: Operaciones que producen nuevos RDDs a partir de existentes, como map, filter o groupBy.
-  - **Actions**: Operaciones que devuelven un valor al driver o almacenan datos externamente, como collect, count o reduce.
+  - **Transformations**: Operaciones que producen nuevos RDDs a partir de existentes, como **map, filter o groupBy**.
+  - **Actions**: Operaciones que devuelven un valor al driver o almacenan datos externamente, como **collect, count o reduce**.
 - **Ventajas**: Al mantener los datos en memoria y ser inmutables, los RDDs evitan escrituras intermedias en disco y facilitan la recuperación en caso de fallos.
 
 ---
 # Spark extra: Variables compartidas
-## Tipo Broadcast
+### Tipo Broadcast
 
 Las variables tipo Broadcast permiten al programador mantener una variable de solo lectura en caché en cada máquina en lugar de enviar una copia de la misma con cada tarea.
 
@@ -403,7 +404,7 @@ broadcastVar.value
 ---
 
 # Spark extra: Variables compartidas
-## Acumuladores
+### Acumuladores
 
 Los acumuladores son variables que solo pueden ser "sumadas" a través de una operación asociativa.
 
@@ -414,7 +415,7 @@ Spark soporta nativamente acumuladores de tipos de valor numérico y colecciones
 ---
 
 # Spark extra: Variables compartidas
-## Acumuladores
+### Acumuladores
 
 
 Solo el programa driver puede leer el valor de un acumulador, no las tareas.
@@ -441,18 +442,14 @@ accum.value
 ---
 # Spark: API
 
-- SparkContext: Interfaz principal de Spark. Permite crear RDDs y variables compartidas:
+- **SparkContext**: Interfaz principal de Spark. Crear RDDs y variables compartidas:
 
 ```python
 from pyspark import SparkConf, SparkContext
 
 conf = SparkConf().setAppName("MiAplicacion").setMaster("local")
 sc = SparkContext(conf=conf)
-```## Ecosistema Spark
-- **Scala vs. Python usando UDFs**: transformacines de un DataFrame con funciones nativas o SQL, ocurren dentro de la JVM.. Sin embargo, al usar UDFs de Python, el código no se ejecuta  Python Runtime. Cada fila del DataFrame se serializa, se envía al Python Runtime y se devuelve a la JVM. 
-
-<center><img src="images/spark/pyvsscala.png" width="50%"></center>
-
+```
 - Crear un RDD desde una lista:
 
 ```python
@@ -467,6 +464,7 @@ rdd = sc.textFile("ruta/al/archivo.txt")
 
 ---
 # Spark API
+### mapReduce
 ```python
 rdd = sc.parallelize(range(1, 5))
 result = rdd.map(lambda x: x + 1).reduce(lambda x, y: x + y)
@@ -476,6 +474,7 @@ Output: ¿?
 
 ---
 # Spark API
+### mapReduce
 ```python
 rdd = sc.parallelize(range(1, 5))
 result = rdd.map(lambda x: x + 1).reduce(lambda x, y: x + y)
@@ -485,7 +484,8 @@ Output: `14`
 
 ---
 # Spark API
-flatMap: Devuelve un iterable aplanado.
+### flatMap
+- Devuelve un iterable aplanado.
 ```python
 rdd = sc.parallelize(range(1, 4))
 rdd.flatMap(lambda x: range(x)).reduce(lambda x, y: x + y)
@@ -494,7 +494,8 @@ Output: `¿?`
 
 --- 
 # Spark API
-flatMap: Devuelve un iterable aplanado.
+### flatMap
+- Devuelve un iterable aplanado.
 ```python
 rdd = sc.parallelize(range(1, 4))
 rdd.flatMap(lambda x: range(x)).reduce(lambda x, y: x + y)
@@ -503,7 +504,7 @@ Output: `4`
 
 ---
 # Spark API
-groupByKey
+### groupByKey
 ```python
 rdd = sc.parallelize([('odd', 1), ('odd', 3), ('even', 2), ('even', 4)])
 rdd.groupByKey().collect()
@@ -514,7 +515,7 @@ Las listas son en realidad de tipo `ResultIterable`, pero se pueden convertir a 
 
 ---
 # Spark API
-groupByKey
+### groupByKey
 ```python
 rdd = sc.parallelize([('odd', 1), ('odd', 3), ('even', 2), ('even', 4)])
 rdd.groupByKey().mapValues(list).collect()
@@ -523,7 +524,7 @@ Output: `[('odd', [1, 3]), ('even', [2, 4])]`
 
 ---
 # Spark API
-reduceByKey
+### reduceByKey
 ```python
 rdd = sc.parallelize([('odd', 1), ('odd', 3), ('even', 2), ('even', 4)])
 rdd.reduceByKey(lambda x, y: x + y).collect()
@@ -533,7 +534,7 @@ Output: `¿?`
 ---
 
 # Spark API
-reduceByKey
+### reduceByKey
 ```python
 rdd = sc.parallelize([('odd', 1), ('odd', 3), ('even', 2), ('even', 4)])
 rdd.reduceByKey(lambda x, y: x + y).collect()
@@ -542,7 +543,7 @@ Output: `[('even', 6), ('odd', 4)]`
 
 ---
 # Spark API
-## aggregateByKey
+### aggregateByKey
 
 ```python
 rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
@@ -560,7 +561,7 @@ Output: `¿?`
 - Segunda función: `g : (U, U) → U`. Agregación de particiones.
 ---
 # Spark API
-## aggregateByKey
+### aggregateByKey
 
 ```python
 rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
@@ -575,7 +576,7 @@ Output: `[(1, [1, 3]), (2, [2, 4, 6])]`
 
 ---
 # Spark API
-## combineByKey
+### combineByKey
 
 ```python
 rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
@@ -592,7 +593,7 @@ Output: `¿?`
 
 ---
 # Spark API
-## combineByKey
+### combineByKey
 
 ```python
 rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
@@ -608,46 +609,10 @@ rdd.combineByKey(lambda x: [x],
 Output: `[(1, [1, 3]), (2, [2, 4, 6])]`
 
 ---
-# Spark API
-
-## combineByKey
-
-```python
-rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
-rdd.glom().collect()
-```
-Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
-
-```python
-rdd.combineByKey(lambda x: [x],
-     lambda x, y: x + [y],
-     lambda x, y: x + y).collect()
-```
-Output: `¿?`
-
----
-# Spark API
-
-## combineByKey
-
-```python
-rdd = sc.parallelize([(1,1),(1,3),(2,2),(2,4),(2,6)])
-rdd.glom().collect()
-```
-Output: `[[ (1, 1) ], [ (1, 3) ], [ (2, 2) ], [ (2, 4), (2, 6) ]]`
-
-```python
-rdd.combineByKey(lambda x: [x],
-     lambda x, y: x + [y],
-     lambda x, y: x + y).collect()
-```
-Output: `[(1, [1, 3]), (2, [2, 4, 6])]`
-
----
 
 # Spark API
 
-## cogroup
+### cogroup
 
 ```python
 rdd1 = sc.parallelize([(1,1),(1,3)])
@@ -660,7 +625,7 @@ Output: `¿?`
 ---
 # Spark API
 
-## cogroup
+### cogroup
 
 ```python
 rdd1 = sc.parallelize([(1,1),(1,3)])
@@ -673,7 +638,7 @@ Output: `[(1,([1,3],[5])),(2,([], [2]))]`
 ---
 
 # Spark API
-## join
+### join
 
 - Por defecto: [inner](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.join.html) 
 
@@ -687,9 +652,9 @@ Output: `¿?`
 ---
 
 # Spark API
-## join
+### join
 
-- Por defecto: [inner](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.join.html) 
+- Por defecto: [inner](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrame.join.html)   
 
 ```python
 rdd1 = sc.parallelize([(1,1),(1,3)])
@@ -701,7 +666,7 @@ Output: `[(1, (1, 5)), (1, (3, 5))]`
 
 ---
 # Spark API
-## Otras funciones
+### Otras funciones
 
 - **sample**: Toma una muestra aleatoria (útil para ML).
 - **sampleByKey**: Diferentes fracciones por clave. 
@@ -720,7 +685,7 @@ Más detalles en: [spark.apache.org/docs/latest/api/python/](https://spark.apach
 
 # DataFrames 
 
-## Definición
+### Definición
 
 - **DataFrames**: Abstracción de datos tabulares similar a una tabla en una base de datos relacional.
 - **Datasets**: Proporcionan una API tipada que combina las ventajas de RDDs y DataFrames.
@@ -731,7 +696,7 @@ Más detalles en: [spark.apache.org/docs/latest/api/python/](https://spark.apach
 # DataFrames 
 
 
-## ¿Qué es un DataFrame en Spark?
+### ¿Qué es un DataFrame en Spark?
 
 - **Abstracción de alto nivel**: Construida sobre RDDs, lo que significa que cada DataFrame tiene un RDD correspondiente.
 - **Basado en esquemas**: Columnas nombradas con tipos de datos.
@@ -756,7 +721,6 @@ Más detalles en: [spark.apache.org/docs/latest/api/python/](https://spark.apach
 ---
 # Dataframes. Ejemplos
 
-
 - Creando la sesión de Spark
 
 ```python
@@ -770,7 +734,6 @@ spark = SparkSession.builder.getOrCreate()
 - Importando datos .csv
 
 ```python
-# Una forma de escribirlo
 salesByMake = spark.read.format('csv') \
             .option("inferSchema", True) \
             .option("header", True) \
@@ -793,7 +756,7 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 ---
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 - **Mostrar el DataFrame**:
   ```python
@@ -809,7 +772,7 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 ---
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 - **Obtener las columnas en una lista**:
   ```python
@@ -822,7 +785,7 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 ---
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 - **Seleccionar columnas requeridas**:
   ```python
@@ -836,7 +799,7 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 ---
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 - **Agregar una nueva columna**:
   ```python
@@ -850,7 +813,7 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 ---
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 - **Agrupar y ordenar**:
   ```python
@@ -864,7 +827,7 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 ---
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 - **Funciones de ventana SQL**: Permiten calcular valores para cada fila basándose en un grupo de filas relacionadas (el "frame"). Esto facilita operaciones como medias móviles, sumas acumulativas o acceso a valores de filas anteriores, manteniendo una salida por cada fila de entrada. Son útiles para tareas analíticas complejas que requieren contexto entre filas.
   ```python
@@ -877,10 +840,11 @@ Opción `inferSchema`: permite leer el tipo de dato tal como está disponible en
 
 --- 
 # Dataframes 
-## Operaciones básicas después de importar datos
+### Operaciones básicas después de importar datos
 
 Para más detalles y ejemplos de funciones comúnmente usadas en DataFrames de PySpark, puedes consultar el siguiente enlace: [PySpark DataFrame Commonly Used Functions](https://medium.com/@mdec718/pyspark-dataframe-commonly-used-functions-411b06e3803d)
 
 
 ---
-# Gracias <!-- _class: section -->
+###### **Parte de esta presentación está basada en el trabajo del Profesor Alberto Mozo Velasco: Apache Spark**
+# Gracias por su atención<!-- _class: section -->
