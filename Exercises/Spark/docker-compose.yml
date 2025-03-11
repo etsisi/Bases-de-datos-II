@@ -19,6 +19,8 @@ services:
     container_name: jupyter
     ports:
       - "8888:8888"
+      - "4041:4040"  
+
     environment:
       - PYSPARK_SUBMIT_ARGS=--packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.0 pyspark-shell
       - SPARK_MASTER=spark://spark:7077
