@@ -5,7 +5,6 @@ Este proyecto ofrece una serie de ejercicios prácticos para aprender a interact
 - Código ejecutable en PySpark
 - Explicación del objetivo
 - Qué observar en la **Spark UI**
-- Sugerencias para capturas de pantalla que ayuden a documentar la ejecución
 
 ---
 
