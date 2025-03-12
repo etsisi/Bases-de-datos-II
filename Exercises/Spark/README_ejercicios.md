@@ -108,8 +108,6 @@ df.groupBy("carrera").count().orderBy("count", ascending=False).show()
 - Uno para agregación (`Shuffle Write`), otro para ordenamiento (`Sort`).
 - Alta actividad de `Shuffle Read`.
 
-💡 **Sugerencia visual:** Captura del stage con `Shuffle Read Size`.
-
 <p align="center">
     <img src="fotos/shuffle.png" alt="Shuffle Read Size" width="100%">
 </p>
